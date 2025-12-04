@@ -1,5 +1,3 @@
-//> using dep com.lihaoyi::os-lib:0.11.6
-
 import scala.util.chaining.scalaUtilChainingOps
 
 object Day2 {
@@ -9,6 +7,7 @@ object Day2 {
     val test =
       """11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124"""
     val input = os.read(os.pwd / "input" / s"$day.txt")
+    "asdf".tail
     println(s"Part 1 test: ${part1(test)}")
     println(s"Part 1: ${part1(input)}")
     println(s"Part 2 test: ${part2(test)}")
@@ -19,7 +18,7 @@ object Day2 {
     //   .pipe(println(_))
   }
 
-  def part1(input: String): String = {
+  def part1(input: String): Long = {
     input
       .split(",")
       .map({ case s"$lo-$hi" => (lo.toLong, hi.toLong) })
@@ -35,9 +34,8 @@ object Day2 {
           .foldLeft(0L)(_ + _)
       })
       .sum
-      .toString()
   }
-  def part2(input: String): String = {
+  def part2(input: String): Long = {
 
     input
       .split(",")
@@ -62,7 +60,6 @@ object Day2 {
           .foldLeft(0L)(_ + _)
       })
       .sum
-      .toString()
   }
 
 }

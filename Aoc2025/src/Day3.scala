@@ -1,5 +1,3 @@
-//> using dep com.lihaoyi::os-lib:0.11.6
-
 import scala.util.chaining.scalaUtilChainingOps
 
 object Day3 {
@@ -17,7 +15,7 @@ object Day3 {
     println(s"Part 2: ${part2(input)}")
   }
 
-  def part1(input: String): String = {
+  def part1(input: String): Int = {
     input
       .split("\n")
       .map(line => {
@@ -29,9 +27,8 @@ object Day3 {
         maxDig1 * 10 + maxDig2
       })
       .sum
-      .toString()
   }
-  def part2(input: String): String = {
+  def part2(input: String): Long = {
     input
       .split("\n")
       .map(line => {
@@ -52,6 +49,5 @@ object Day3 {
         getBest()
       })
       .sum
-      .toString()
   }
 }

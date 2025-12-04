@@ -1,5 +1,3 @@
-//> using dep com.lihaoyi::os-lib:0.11.6
-
 import scala.util.chaining.scalaUtilChainingOps
 
 object Day1 {
@@ -23,7 +21,7 @@ L82"""
     println(s"Part 2: ${part2(input)}")
   }
 
-  def part1(input: String): String = {
+  def part1(input: String): Int = {
     input
       .split("\n")
       .map({
@@ -35,9 +33,8 @@ L82"""
         (next, points + (if (next == 0) 1 else 0))
       })
       ._2
-      .toString()
   }
-  def part2(input: String): String = {
+  def part2(input: String): Int = {
     input
       .split("\n")
       .map({
@@ -54,7 +51,6 @@ L82"""
         (next %% 100, total + points)
       })
       ._2
-      .toString()
   }
   extension (i: Int) def %%(m: Int): Int = {
     val r = i % m
