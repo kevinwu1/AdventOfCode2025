@@ -24,7 +24,9 @@ object Day5 {
     println(s"Part 1 test: ${part1(test)}")
     println(s"Part 1: ${part1(input)}")
     println(s"Part 2 test: ${part2(test)}")
+    val t = System.nanoTime()
     println(s"Part 2: ${part2(input)}")
+    println((System.nanoTime() - t) / 1e9)
   }
   def part1(input: String): Int = {
     val Array(first, second) = input.split("\n\n")
