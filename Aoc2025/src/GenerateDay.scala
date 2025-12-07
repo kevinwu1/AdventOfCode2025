@@ -1,7 +1,7 @@
 object Setup {
 
   def main(args: Array[String]): Unit = {
-    generateDay(5)
+    generateDay(7)
   }
 
   def generateInputFiles(): Unit = {
