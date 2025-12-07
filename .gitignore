@@ -3,3 +3,4 @@
 .scala-build
 .vscode
 out
+leaderboard.json
