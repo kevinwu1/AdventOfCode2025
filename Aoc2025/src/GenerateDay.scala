@@ -1,7 +1,7 @@
 object Setup {
 
   def main(args: Array[String]): Unit = {
-    generateDay(7)
+    generateDay(8)
   }
 
   def generateInputFiles(): Unit = {
@@ -69,19 +69,19 @@ object Day$day {
       .filter(inBounds(_))
       .toVector
   }
-  def part1(input: String): Int = {
+  def part1(input: String): Long = {
     given grid: Grid[String] = input
       .split("\\n")
       .map(_.split(""))
-    0
+    0L
   }
 
-  def part2(input: String): Int = {
+  def part2(input: String): Long = {
     given grid: Grid[String] = input
       .split("\\n")
       .map(_.split(""))
 
-    0
+    0L
   }
 }
 
