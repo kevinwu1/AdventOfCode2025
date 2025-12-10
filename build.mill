@@ -7,8 +7,11 @@ object Aoc2025 extends ScalaModule {
   def scalaVersion = "3.7.2"
   def ivyDeps = Agg(
     ivy"org.scala-lang::toolkit:0.6.0",
-    ivy"org.scala-lang.modules::scala-parallel-collections:1.1.0"
+    ivy"org.scala-lang.modules::scala-parallel-collections:1.1.0",
+    ivy"org.choco-solver:choco-solver:4.10.14",
+    ivy"org.ejml:ejml-all:0.44.0"
   )
+
   override def scalacOptions: T[Seq[String]] =
     Seq("-no-indent", "-experimental")
   override def moduleDeps = Seq(macros)

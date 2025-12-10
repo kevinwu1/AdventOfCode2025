@@ -26,7 +26,7 @@ object ShowTimes {
       .values
       .map(upickle.default.read[Member](_))
       .toVector
-    val days = 9
+    val days = 10
     (1 to days).map(day => {
       val start = ZonedDateTime
         .of(
